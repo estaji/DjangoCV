@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <title>
+            {% block title %}
+            {% endblock title %}
+        </title>
+        <meta name="description" content="Omid Estaji's Resume and Blog">
+        <meta name="author" content="Omid Estaji">
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+        {% block css %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+            <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% endblock %}
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark mb-4">
+            <a class="navbar-brand" href="{% url 'home' %}">Omid Estaji</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'home' %}"><i class="fa fa-download" aria-hidden="true"></i>Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://www.linkedin.com/in/omid-estaji/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://github.com/estaji" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://stackexchange.com/users/10058818/omid-estaji?tab=accounts" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        <footer class="text-muted">
+            <div class="container text-center">
+                <p><i class="fa fa-copyright" aria-hidden="true"></i> Omid Estaji {% now "Y" %}</p>
+            </div>
+        </footer>
+
+        {% block javascript %}
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            <script src="{% static 'js/base.js' %}"></script>
+        {% endblock javascript %}
+    </body>
+</html>
+
