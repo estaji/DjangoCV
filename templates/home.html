@@ -14,23 +14,25 @@
    
     <div class="card">
         <h2 class="card-header">Experiences</h2>
-        <div class="card-body">
-            <h4 class="card-title">IT Administrator</h4>
-            <div class="card-subtitle mb-2 text-muted">
-                <div style="float:right;">Sep 2018 - Present</div>
-                <div><img src="images/pixelir_logo.png" class="card-img-left" alt="..."><a class="card-link" rel="nofollow" href="http://pixel.ir" target="_blank">Pixel Camera Shop</a></div>
-                <small style="float:right;">Tehran</small>
+        {% for job in jobs.all %}
+            <div class="card-body">
+                <h4 class="card-title">{{ job.title }}</h4>
+                <div class="card-subtitle mb-2 text-muted">
+                    <div style="float:right;">{{ job.start }} - {{ job.end }}</div>
+                    <div><img src="{{ job.logo.url }}" class="card-img-left" alt="..." width="65" height="65"><a class="card-link" rel="nofollow" href="http://pixel.ir" target="_blank">{{ job.company }}</a></div>
+                    <small style="float:right;">{{ job.location }}</small>
+                </div>
+                <div>
+                    <p class="card-text">{{ job.summary }}</p>
+                </div>
+                <ul>
+                    <li>Bullet one Bullet one</li>
+                    <li>Bullet two Bullet two</li>
+                    <li>Bullet three Bullet three</li>
+                    <li>Bullet four Bullet four</li>
+                </ul>
             </div>
-            <div>
-                <p class="card-text">Supporting all the IS/IT systems, infrastructure and users.Install, modify and repair computer hardware and software.Monitor and manage servers and network resources.Research, develop and manage network systems and devices.</p>
-            </div>
-            <ul>
-                <li>Bullet one Bullet one</li>
-                <li>Bullet two Bullet two</li>
-                <li>Bullet three Bullet three</li>
-                <li>Bullet four Bullet four</li>
-            </ul>
-        </div>
+        {% endfor %}
     </div>
 
 {% endblock content %}

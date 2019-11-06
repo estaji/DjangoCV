@@ -1,3 +1,13 @@
 from django.db import models
 
-# Create your models here.
+class Job(models.Model):
+    title = models.CharField(max_length=30)
+    logo = models.ImageField(upload_to='logos/')
+    company = models.CharField(max_length=30)
+    start = models.CharField(max_length=10)
+    end = models.CharField(max_length=10)
+    location = models.CharField(max_length=10)
+    summary = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.title + ' at ' +self.company
