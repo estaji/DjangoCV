@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
     <div class="jumbotron">
         <p class="lead">Hello, I'm</p>
         <h1 class="display-4">Omid Estaji</h1>
         <p class="lead text-center">
-            <img src="..." class="img-fluid img-thumbnail rounded-circle" alt="...">
+            <img src="{% static 'avatar.jpeg' %}" class="img-fluid img-thumbnail rounded-circle" alt="..." width="200" height="200">
         </p>
         <p class="lead">I enjoy studying and self-learning. I skilled in Cisco & MikroTik networking, Linux & Microsoft system administration and Python programming. Also I interested in Security and DevOps, so I follow them in my road map. I'm an organized and positive person who looks for progress.</p>
         <p class="lead text-center">
