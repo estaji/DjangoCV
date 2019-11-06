@@ -18,9 +18,8 @@
             <div class="card-body">
                 <h4 class="card-title">{{ job.title }}</h4>
                 <div class="card-subtitle mb-2 text-muted">
-                    <div style="float:right;">{{ job.start }} - {{ job.end }}</div>
-                    <div><img src="{{ job.logo.url }}" class="card-img-left" alt="..." width="65" height="65"><a class="card-link" rel="nofollow" href="http://pixel.ir" target="_blank">{{ job.company }}</a></div>
-                    <small style="float:right;">{{ job.location }}</small>
+                    <div style="float:right;">{{ job.start }} - {{ job.end }}<br/><small style="float:right;">{{ job.location }}</small></div>
+                    <div><img src="{{ job.logo.url }}" class="card-img-left" alt="..." width="65" height="65"><a class="card-link" rel="nofollow" href="{{ job.url }}" target="_blank">&nbsp;{{ job.company }}</a></div>
                 </div>
                 <div>
                     <p class="card-text">{{ job.summary }}</p>
