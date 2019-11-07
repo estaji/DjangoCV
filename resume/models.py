@@ -12,3 +12,10 @@ class Job(models.Model):
 
     def __str__(self):
         return self.title + ' at ' +self.company
+
+class Education(models.Model):
+    university = models.CharField(max_length=30)
+    level = models.CharField(max_length=20)
+    title = models.CharField(max_length=40)
+    start = models.CharField(max_length=10)
+    end = models.CharField(max_length=10)

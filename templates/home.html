@@ -25,12 +25,19 @@
                 <div>
                     <p class="card-text">{{ job.summary }}</p>
                 </div>
-                <ul>
-                    <li>Bullet one Bullet one</li>
-                    <li>Bullet two Bullet two</li>
-                    <li>Bullet three Bullet three</li>
-                    <li>Bullet four Bullet four</li>
-                </ul>
+            </div>
+        {% endfor %}
+    </div>
+    </br>
+    <div class="card">
+        <h2 class="card-header">Education</h2>
+        {% for edu in edus.all %}
+            <div class="card-body">
+                <h4 class="card-title">{{ edu.level }}&nbsp;{{ edu.title }}</h4>
+                <div class="card-subtitle mb-2 text-muted">
+                    <div style="float:right;">{{ edu.start }} - {{ edu.end }}</div>
+                    <div><h5>{{ edu.university }}</h5></div>
+                </div>
             </div>
         {% endfor %}
     </div>
