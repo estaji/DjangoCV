@@ -19,3 +19,6 @@ class Education(models.Model):
     title = models.CharField(max_length=40)
     start = models.CharField(max_length=10)
     end = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.level + ' at ' +self.university
