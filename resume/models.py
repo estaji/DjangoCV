@@ -22,3 +22,16 @@ class Education(models.Model):
 
     def __str__(self):
         return self.level + ' at ' +self.university
+
+class Skill(models.Model):
+    STAR_CHOICES = (
+        (1, ("1")),
+        (2, ("2")),
+        (3, ("3")),
+    )
+
+    skill = models.CharField(max_length=40)
+    star = models.IntegerField(choices=STAR_CHOICES, default=1)
+
+    def __str__(self):
+        return self.skill
