@@ -30,7 +30,7 @@
     </div>
     </br>
     <div class="card">
-        <h2 class="card-header">Education</h2>
+        <h2 class="card-header">Educations</h2>
         {% for edu in edus.all %}
             <div class="card-body">
                 <h4 class="card-title">{{ edu.level }}&nbsp;{{ edu.title }}</h4>
@@ -74,6 +74,15 @@
                         <div class="card-subtitle mb-3 text-muted">
                             {{ lang.level }}
                         </div>
+                {% endfor %}
+            </div>
+    </div>
+    </br>
+    <div class="card">
+        <h2 class="card-header">Honors</h2>
+            <div class="card-body">
+                {% for honor in honors.all %}
+                        <p class="card-text">{{ honor.honor }}</p>
                 {% endfor %}
             </div>
     </div>

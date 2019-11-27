@@ -41,3 +41,9 @@ class Language(models.Model):
 
     def __str__(self):
         return self.lang
+
+class Honor(models.Model):
+    honor = models.CharField(max_length=60)
+    
+    def __str__(self):
+        return self.honor
