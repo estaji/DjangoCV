@@ -29,9 +29,15 @@ class Skill(models.Model):
         (2, ("2")),
         (3, ("3")),
     )
-
     skill = models.CharField(max_length=40)
     star = models.IntegerField(choices=STAR_CHOICES, default=1)
 
     def __str__(self):
         return self.skill
+
+class Language(models.Model):
+    lang = models.CharField(max_length=10)
+    level = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.lang

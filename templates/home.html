@@ -44,33 +44,38 @@
     </br>
     <div class="card">
         <h2 class="card-header">Technical Skills</h2>
-
+        <div class="card-body">
+            {% for skill in skill.all %}
+                <h5 class="card-subtitle mb-3">
+                    {{ skill.skill }}&nbsp;
+                    {% if skill.star == 1 %}
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    {% elif skill.star == 2 %}
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    {% elif skill.star == 3 %}
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    {% endif %}
+                </h5>
+            {% endfor %}
+        </div>
+    </div>
+    </br>
+    <div class="card">
+        <h2 class="card-header">Languages</h2>
             <div class="card-body">
-                <div>
-                    {% for skill in skill.all %}
-                    <div class="d-inline-block">
-                        <h5 class="card-subtitle mb-3">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            {{ skill.skill }}
-                            {% if skill.star == 1 %}
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            {% elif skill.star == 2 %}
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                            {% elif skill.star == 3 %}
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                            {% endif %}
-                        </h5>
-                    </div>
-                    {% endfor %}
-                </div>
+                {% for lang in langs.all %}
+                        <h5 class="card-subtitle mb-2">{{ lang.lang }}</h5>
+                        <div class="card-subtitle mb-3 text-muted">
+                            {{ lang.level }}
+                        </div>
+                {% endfor %}
             </div>
-
     </div>
 
 {% endblock content %}
