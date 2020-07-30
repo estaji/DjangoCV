@@ -36,8 +36,8 @@ class Skill(models.Model):
         return self.skill
 
 class Language(models.Model):
-    lang = models.CharField(max_length=10)
-    level = models.CharField(max_length=25)
+    lang = models.CharField(max_length=25)
+    level = models.CharField(max_length=100)
 
     def __str__(self):
         return self.lang
