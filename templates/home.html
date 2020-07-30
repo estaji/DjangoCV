@@ -23,7 +23,7 @@
                     <div><img src="{{ job.logo.url }}" class="card-img-left" alt="..." width="65" height="65"><a class="card-link" rel="nofollow" href="{{ job.url }}" target="_blank">&nbsp;{{ job.company }}</a></div>
                 </div>
                 <div>
-                    <p class="card-text">{{ job.summary }}</p>
+                    <p class="card-text">{{ job.summary|urlize }}</p>
                 </div>
             </div>
         {% endfor %}
