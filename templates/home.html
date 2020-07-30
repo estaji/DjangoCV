@@ -67,6 +67,17 @@
     </div>
     </br>
     <div class="card">
+        <h2 class="card-header">Soft Skills</h2>
+        <div class="card-body">
+            {% for skill in softskill.all %}
+                <h5 class="card-subtitle mb-3">
+                    {{ skill.skill }}&nbsp;
+                </h5>
+            {% endfor %}
+        </div>
+    </div>
+    </br>
+    <div class="card">
         <h2 class="card-header">Languages</h2>
             <div class="card-body">
                 {% for lang in langs.all %}
