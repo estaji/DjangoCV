@@ -8,7 +8,7 @@ class Job(models.Model):
     start = models.CharField(max_length=10)
     end = models.CharField(max_length=10)
     location = models.CharField(max_length=10)
-    summary = models.CharField(max_length=250)
+    summary = models.TextField()
 
     def __str__(self):
         return self.title + ' at ' +self.company
