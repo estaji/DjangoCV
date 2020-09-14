@@ -53,3 +53,8 @@ class SoftSkill(models.Model):
 
     def __str__(self):
         return self.skill
+
+class Jumbotron(models.Model):
+    greeting = models.CharField(max_length=30)
+    name = models.CharField(max_length=30)
+    text = models.TextField()
