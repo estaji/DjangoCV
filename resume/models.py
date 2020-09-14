@@ -65,6 +65,7 @@ class Jumbotron(models.Model):
     greeting = models.CharField(max_length=30)
     name = models.CharField(max_length=30)
     text = models.TextField()
+    email = models.EmailField(max_length=254)
 
 
 class Seo(models.Model):
