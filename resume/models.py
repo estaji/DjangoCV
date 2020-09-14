@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Job(models.Model):
     title = models.CharField(max_length=30)
     logo = models.ImageField(upload_to='logos/')
@@ -11,7 +12,8 @@ class Job(models.Model):
     summary = models.TextField()
 
     def __str__(self):
-        return self.title + ' at ' +self.company
+        return self.title + ' at ' + self.company
+
 
 class Education(models.Model):
     university = models.CharField(max_length=30)
@@ -21,7 +23,8 @@ class Education(models.Model):
     end = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.level + ' at ' +self.university
+        return self.level + ' at ' + self.university
+
 
 class Skill(models.Model):
     STAR_CHOICES = (
@@ -35,6 +38,7 @@ class Skill(models.Model):
     def __str__(self):
         return self.skill
 
+
 class Language(models.Model):
     lang = models.CharField(max_length=25)
     level = models.CharField(max_length=100)
@@ -42,17 +46,20 @@ class Language(models.Model):
     def __str__(self):
         return self.lang
 
+
 class Honor(models.Model):
     honor = models.CharField(max_length=60)
-    
+
     def __str__(self):
         return self.honor
+
 
 class SoftSkill(models.Model):
     skill = models.CharField(max_length=40)
 
     def __str__(self):
         return self.skill
+
 
 class Jumbotron(models.Model):
     greeting = models.CharField(max_length=30)
