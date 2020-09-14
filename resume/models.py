@@ -72,3 +72,12 @@ class Seo(models.Model):
     description = models.CharField(max_length=160)
     author = models.CharField(max_length=50)
     keywords = models.CharField(max_length=100)
+
+
+class Bar(models.Model):
+    brand = models.CharField(max_length=50)
+    linkedin = models.URLField(max_length=200, default="#", blank=True)
+    github = models.URLField(max_length=200, default="#", blank=True)
+    stackexchange = models.URLField(max_length=254, default="#", blank=True)
+    instagram = models.URLField(max_length=200, default="#", blank=True)
+    twitter = models.URLField(max_length=200, default="#", blank=True)

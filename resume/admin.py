@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Job, Education, Skill, Language, Honor, SoftSkill, Jumbotron, Seo
+from .models import Job, Education, Skill, Language, Honor, SoftSkill, Jumbotron, Seo, Bar
 
+admin.site.register(Bar)
 admin.site.register(Seo)
 admin.site.register(Jumbotron)
 admin.site.register(Job)

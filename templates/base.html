@@ -21,7 +21,7 @@
 
     <body>
         <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark mb-4">
-            <a class="navbar-brand" href="{% url 'home' %}">Omid Estaji</a>
+            <a class="navbar-brand" href="{% url 'home' %}">{{ bar.brand }}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,13 +37,10 @@
                         <a class="nav-link" href="#">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://www.linkedin.com/in/omid-estaji/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a class="nav-link" href="{{ bar.linkedin }}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://github.com/estaji" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://stackexchange.com/users/10058818/omid-estaji" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        <a class="nav-link" href="{{ bar.github }}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                     </li>
                 </ul>
             </div>
@@ -55,12 +52,12 @@
         <footer class="text-muted">
             </br>
             <div class="container text-center">
-                <a href="mailto:estaji.work@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x" style="color:gray" aria-hidden="true"></i></a>
-                <a href="http://www.linkedin.com/in/omid-estaji/" target="_blank"><i class="fa fa-linkedin-square fa-2x" style="color:gray" aria-hidden="true"></i></a>
-                <a href="http://github.com/estaji" target="_blank"><i class="fa fa-github-square fa-2x" style="color:gray" aria-hidden="true"></i></a>
-                <a href="http://stackexchange.com/users/10058818/omid-estaji?tab=accounts" target="_blank"><i class="fa fa-stack-exchange fa-2x" style="color:gray" aria-hidden="true"></i></a>
-                <a href="http://instagram.com/oestaji" target="_blank"><i class="fa fa-instagram fa-2x" style="color:gray" aria-hidden="true"></i></a>
-                <a href="#" target="_blank"><i class="fa fa-twitter-square fa-2x" style="color:gray" aria-hidden="true"></i></a>                
+                <a href="mailto:{{ jumbotron.email }}" target="_blank"><i class="fa fa-envelope fa-2x" style="color:gray" aria-hidden="true"></i></a>
+                <a href="{{ bar.linkedin }}" target="_blank"><i class="fa fa-linkedin-square fa-2x" style="color:gray" aria-hidden="true"></i></a>
+                <a href="{{ bar.github }}" target="_blank"><i class="fa fa-github-square fa-2x" style="color:gray" aria-hidden="true"></i></a>
+                <a href="{{ bar.stackexchange }}" target="_blank"><i class="fa fa-stack-exchange fa-2x" style="color:gray" aria-hidden="true"></i></a>
+                <a href="{{ bar.instagram }}" target="_blank"><i class="fa fa-instagram fa-2x" style="color:gray" aria-hidden="true"></i></a>
+                <a href="{{ bar.twitter }}" target="_blank"><i class="fa fa-twitter-square fa-2x" style="color:gray" aria-hidden="true"></i></a>                
                 <p><i class="fa fa-copyright" aria-hidden="true"></i> Omid Estaji {% now "Y" %}</p>
             </div>
         </footer>
