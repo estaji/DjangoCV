@@ -9,8 +9,8 @@
             {% block title %}
             {% endblock title %}
         </title>
-        <meta name="description" content="Omid Estaji's Resume and Blog">
-        <meta name="author" content="Omid Estaji">
+        {% block meta_tags %}
+        {% endblock meta_tags %}
         <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
         {% block css %}
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">

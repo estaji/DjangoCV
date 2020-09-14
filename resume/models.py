@@ -65,3 +65,9 @@ class Jumbotron(models.Model):
     greeting = models.CharField(max_length=30)
     name = models.CharField(max_length=30)
     text = models.TextField()
+
+
+class Seo(models.Model):
+    description = models.CharField(max_length=160)
+    author = models.CharField(max_length=50)
+    keywords = models.CharField(max_length=100)
