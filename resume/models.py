@@ -72,6 +72,7 @@ class Seo(models.Model):
     description = models.CharField(max_length=160)
     author = models.CharField(max_length=50)
     keywords = models.CharField(max_length=100)
+    title = models.CharField(max_length=60)
 
 
 class Bar(models.Model):
