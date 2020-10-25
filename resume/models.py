@@ -32,7 +32,7 @@ class Skill(models.Model):
         (2, ("2")),
         (3, ("3")),
     )
-    skill = models.CharField(max_length=40)
+    skill = models.CharField(max_length=100)
     star = models.IntegerField(choices=STAR_CHOICES, default=1)
 
     def __str__(self):
