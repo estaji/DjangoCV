@@ -14,6 +14,9 @@ class Job(models.Model):
     def __str__(self):
         return self.title + ' at ' + self.company
 
+    # show last one on top of others
+    class Meta:
+        ordering = ['-id',]
 
 class Education(models.Model):
     university = models.CharField(max_length=30)
